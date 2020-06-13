@@ -18,9 +18,6 @@ const CheckoutForm = (props) => {
   // const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [values, handleChanges, handleSubmit, showSuccessMessage] = useForm(initialValue);
 
- 
-
-  
 
   return (
     <>
@@ -62,7 +59,7 @@ const CheckoutForm = (props) => {
           Zip:
           <input name="zip" value={values.zip} onChange={handleChanges} />
         </label>
-        <button>Checkout</button>
+        <button name='checkOut'>Checkout</button>
       </form>
 
       {showSuccessMessage && (
@@ -70,7 +67,7 @@ const CheckoutForm = (props) => {
           <p>
             You have ordered some plants! Woo-hoo! <span role="img">🎉</span>
           </p>
-          <p>Your new green friends will be shipped to:</p>
+          <p>Your new green friends will be shipped to: </p>
           <br />
           <br />
           <p>
